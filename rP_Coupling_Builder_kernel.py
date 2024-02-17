@@ -1,3 +1,4 @@
+from __future__ import print_function
 from abaqus import *
 from abaqusConstants import *
 import regionToolset
@@ -57,7 +58,7 @@ kw_z_value=None,):
     if (kw_coupling == False) and (kw_name=='Coupling-'):
         kw_name = 'RP-'
     
-    if kw_name[-1] <> '-':
+    if kw_name[-1] != '-':
         kw_name = kw_name + '-'
 
         
@@ -70,7 +71,7 @@ kw_z_value=None,):
         i = i+1
         cntnname = kw_name+str(i)
         for name in featurenames:
-            if name.find(cntnname)<>-1:
+            if name.find(cntnname) != -1:
                 x = 0
     
     #cntnname = currname    
@@ -129,10 +130,10 @@ kw_z_value=None,):
         rp = ass.ReferencePoint(point=center)
         ass.features.changeKey(fromName=rp.name, 
         toName=rpname_a)
-        print '\nUsed center coords: '+str(center)
+        print('\nUsed center coords: '+str(center))
     except:
-        print '\nError: Failed to create RP with center coords'
-        print str(center)
+        print('\nError: Failed to create RP with center coords')
+        print(str(center))
         return
     
     rp_a = r1[rp.id]

@@ -76,10 +76,10 @@ toolset.registerGuiMenuButton(
     kernelInitString='import rP_Coupling_Builder_kernel',
     applicableModules=['Assembly','Step','Interaction', 'Load'],
     version='1.0',
-    author='Matthias Ernst',
+    author='Matthias Ernst, Dassault Systemes Germany',
     description='Plugin to create RP in center of selected face(s) and optionally a coupling. '\
                 'Supported in A/CAE 2016 or higher. Selection of geometric surfaces is required. '\
                 'Always confirm selection with DONE button or middle mouse button before pressing Apply or OK.'\
-                '\n\nUsage at your own risk.',
+                '\n\nThis is not an official Dassault Systemes product.',
     helpUrl='N/A'
 )
